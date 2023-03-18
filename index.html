@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type= "text/javascript" src="scriptt.js"></script>
+</head>
+<body>
+    
+
+        <h3>Conversión Dolares a Pesos</h3>
+        <form name="convertir">
+            <label for="dolar">Dolar</label><br>
+            <input type="text" name="dolar" id="dolares"><br>
+            <label for="pesos">Pesos</label><br>
+            <input type="text" name="pesos"    id="pesos"><br>
+            <button id="button" style="margin-top: 20px;"  type="button" onclick="convertirDolares()">Convertir a Pesos</button> <br>
+           
+        </form>
+        <br>
+        <br>
+     </div>
+     <br>
+
+<div>
+    <h3>Conversión Pesos a Dolares</h3>
+    <form name="convertir">
+        <label for="pesos">Pesos</label><br>
+        <input type="text" name="pesos" id="pesoss"><br>
+        <label for="dolars">Dolar</label><br>
+        <input type="text" name="dolar" id="dolars"><br>
+        <button id="button" style="margin-top: 20px;" type="button" onclick='convertirPesos()'>Convertir a
+            Dolares</button>
+    </form>
+    <br><br>
+</div>
+<br>
+
+<div>
+
+    <h3>Conversión de grados centigrados a grados Fahrenheit</h3>
+
+    <label for="text">Grados Centígrados</label>
+    <input type="number" id="centigrados">
+
+    <button id="button" type="button" onclick="convertirFahrenheit()">Conversión</button>
+    <input type="fahrenheit" id="fahrenheit">
+    <label for="text">Grados Fahrenheit</label>
+
+</div>
+<br>
+<div>
+
+    <form>
+        <h1>Envío de paquete</h1><br>
+        <label for="nombre">Nombre del cliente:</label><br>
+        <input id="nombre" class="form-control" type="text"><br>
+        <br>
+        <label for="material">Material de la caja:</label>
+        <select name="material" id="material">
+            <option value="">Seleccione</option>
+            <option value="carton">Cartón</option>
+            <option value="madera">Madera</option>
+            <option value="plastico">Plástico</option>
+        </select><br>
+        <br>
+        <label for="dimensiones">Dimensiones:</label>
+        <select name="dimensiones" id="dimensiones">
+            <option value="">Seleccione</option>
+            <option value="diminuta">Diminuta</option>
+            <option value="mediana">Mediano</option>
+            <option value="grande">Grande</option>
+        </select><br>
+        <br>
+        <br>
+        <label for="comentarios">Comentarios</label><br>
+        <textarea id="comentarios" cols="30" rows="5"></textarea><br>
+        <br>
+        <button id="button" type="button" onclick="agregarPedido()">Enviar</button>
+    </form>
+</div>
+<br>
+<br>
+
+
+<div>
+    <form>
+        <h2>Ingresar nombres y se formará una lista</h2>
+        <input id="nombree" name="text" placeholder="Insertar un nombre..." type="text1"><br>
+        <button type="submit" style="margin-top: 20px;" onclick="insertarNombre()">Insertar</button>
+    </form>
+
+    <div>
+        <ul id="lista-nombre"></ul>
+    </div>
+
+</div>
+
+</body>
+
+</html>

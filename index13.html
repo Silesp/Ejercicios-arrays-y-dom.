@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h3>ADIVINA EL NÚMERO</h3>
+    <P> Tienes 3 intentos para adivinar un número entre el 0 y 5</P>
+    <div class="resultParas">
+        <p class="guesses"></p>
+        <p class="lastResult"></p>
+        <p class="lowOrHi"></p>
+      </div>
+
+      <label for="guessField">Adivina el número: </label><input type="text" id="guessField" class="guessField">
+<button type="submit" value="Enviar respuesta" onclick="checkGuess()" class="guessSubmit">Enviar respuesta</button>
+</body>
+
+<script>
+
+let randomNumber = Math.floor(Math.random() * 5) + 1;
+
+const guesses = document.querySelector('.guesses');
+const lastResult = document.querySelector('.lastResult');
+const lowOrHi = document.querySelector('.lowOrHi');
+
+const guessSubmit = document.querySelector('.guessSubmit');
+const guessField = document.querySelector('.guessField');
+
+let guessCount = 1;
+
+
+function checkGuess() {
+    let userGuess = Number(guessField.value);
+  if (guessCount === 1) {
+    guesses.textContent = 'Intentos anteriores: ';
+  }
+  guesses.textContent += userGuess + ' ';
+
+  if (userGuess === randomNumber) {
+    lastResult.textContent = '¡Felicidades! ¡Lo adivinaste!';
+    lastResult.style.backgroundColor = 'green';
+    lowOrHi.textContent = '';
+  } else if (guessCount === 3) {
+    lastResult.textContent = '¡¡¡Fin del juego!!! ¡¡¡Perdiste!!!';
+  } else {
+    lastResult.textContent = '¡Incorrecto!';
+    lastResult.style.backgroundColor = 'red';
+  }
+  guessCount++;
+  guessField.value = '';
+  guessField.focus();
+}
+
+</script>
+</html>
